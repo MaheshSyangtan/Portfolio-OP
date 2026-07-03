@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cybersecurity Professional Portfolio — Penetration Testing, AppSec, GRC, and more." />
+  <meta name="keywords" content="cybersecurity, penetration testing, appsec, OSCP, portfolio, security engineer" />
+  <meta name="author" content="Mahesh Syangtan" />
+  <title>Mahesh Syangtan | Cybersecurity Professional</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">MS</span>
+        <span class="logo-bracket">]</span>
+        <span class="logo-cursor">_</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <div class="mobile-nav-content">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <!-- Animated grid background -->
+      <div class="hero-grid-bg"></div>
+      <!-- Particle canvas -->
+      <canvas class="particle-canvas" id="particle-canvas"></canvas>
+
+      <div class="hero-content">
+        <!-- Status badge -->
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">
+          Mahesh Syangtan
+        </h1>
+        <h2 class="hero-title">
+          <span class="title-static">Cybersecurity</span>
+          <span class="title-dynamic" id="hero-title-dynamic"></span>
+        </h2>
+        <p class="hero-headline">Securing Architecture. Defending Data.</p>
+        <p class="hero-subtitle">
+          Focused on <span class="accent">Penetration Testing</span>,
+          <span class="accent">Application Security</span>, and
+          <span class="accent">Governance, Risk &amp; Compliance (GRC)</span>.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+            <i class="ph ph-shield-check"></i>
+            View Projects
+          </a>
+          <!-- ✏️ EDIT: Update href to your actual resume file -->
+          <a href="resume.pdf" class="btn btn-outline" id="hero-download-resume" download>
+            <i class="ph ph-download-simple"></i>
+            Download Resume
+          </a>
+        </div>
+
+        <!-- Terminal Widget -->
+        <div class="terminal-widget" id="terminal-widget">
+          <div class="terminal-titlebar">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">bash — 80×24</span>
+            <span class="terminal-secure-badge">
+              <i class="ph ph-lock-simple"></i> SSH Secure
+            </span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output"></div>
+            <div class="terminal-input-line">
+              <span class="terminal-prompt">visitor@portfolio:~$</span>
+              <span class="terminal-cursor-blink" id="terminal-cursor">▋</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// 01. about_me</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-col">
+            <div class="about-card">
+              <p class="about-bio">
+                <!-- ✏️ EDIT: Replace with your personal bio -->
+                I'm a passionate cybersecurity professional with a relentless drive to stay ahead of evolving threats. My expertise spans the full security lifecycle — from proactive red-team engagements and vulnerability research to building resilient blue-team detection pipelines and governance frameworks.
+              </p>
+              <p class="about-bio">
+                I believe the best defenders think like attackers. My work is grounded in the principle that security is not a product — it's a mindset. Whether hunting advanced persistent threats, hardening cloud infrastructure, or aligning teams with compliance frameworks, I bring structured thinking and technical depth to every engagement.
+              </p>
+              <div class="about-tags">
+                <span class="tag">🎯 Threat Hunter</span>
+                <span class="tag">🔴 Red Teamer</span>
+                <span class="tag">🔵 Blue Teamer</span>
+                <span class="tag">☁️ Cloud Security</span>
+                <span class="tag">📋 GRC Specialist</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-col">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-calendar-blank"></i></div>
+                <!-- ✏️ EDIT: Replace with your years of experience -->
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Years of Experience</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-warning-octagon"></i></div>
+                <!-- ✏️ EDIT: Replace with your incidents handled count -->
+                <div class="stat-number" data-target="120">0</div>
+                <div class="stat-label">Incidents Handled</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-bug"></i></div>
+                <!-- ✏️ EDIT: Replace with your bugs/vulnerabilities found -->
+                <div class="stat-number" data-target="340">0</div>
+                <div class="stat-label">Vulnerabilities Found</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon"><i class="ph ph-certificate"></i></div>
+                <!-- ✏️ EDIT: Replace with your certifications count -->
+                <div class="stat-number" data-target="8">0</div>
+                <div class="stat-label">Certifications Earned</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// 02. skills_matrix</span>
+          <h2 class="section-title">Skills Matrix</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Offensive Security -->
+          <div class="skill-category-card" id="skill-offensive">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon red">
+                <i class="ph ph-sword"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Offensive Security</h3>
+                <p class="skill-cat-subtitle">Red Team &amp; Penetration Testing</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Kali Linux</span>
+              <span class="skill-tag">Metasploit</span>
+              <span class="skill-tag">Burp Suite</span>
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Nmap / Nessus</span>
+              <span class="skill-tag">SQLMap</span>
+              <span class="skill-tag">John the Ripper</span>
+              <span class="skill-tag">Cobalt Strike</span>
+              <span class="skill-tag">OWASP Top 10</span>
+            </div>
+          </div>
+
+          <!-- Defensive Security -->
+          <div class="skill-category-card" id="skill-defensive">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon blue">
+                <i class="ph ph-shield-check"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Defensive Security</h3>
+                <p class="skill-cat-subtitle">Blue Team &amp; Incident Response</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Splunk SIEM</span>
+              <span class="skill-tag">Elastic Stack</span>
+              <span class="skill-tag">CrowdStrike</span>
+              <span class="skill-tag">Snort / Suricata</span>
+              <span class="skill-tag">Incident Response</span>
+              <span class="skill-tag">Digital Forensics</span>
+              <span class="skill-tag">Threat Intelligence</span>
+              <span class="skill-tag">MITRE ATT&amp;CK</span>
+              <span class="skill-tag">Vulnerability Mgmt</span>
+            </div>
+          </div>
+
+          <!-- Cloud & DevSecOps -->
+          <div class="skill-category-card" id="skill-cloud">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon teal">
+                <i class="ph ph-cloud"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Cloud &amp; DevSecOps</h3>
+                <p class="skill-cat-subtitle">Infrastructure &amp; Pipeline Security</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS Security</span>
+              <span class="skill-tag">Azure Sentinel</span>
+              <span class="skill-tag">Docker / Kubernetes</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">CI/CD Security</span>
+              <span class="skill-tag">IAM / Zero Trust</span>
+              <span class="skill-tag">CSPM Tools</span>
+              <span class="skill-tag">Secrets Management</span>
+              <span class="skill-tag">SBOM Analysis</span>
+            </div>
+          </div>
+
+          <!-- Programming / Scripting -->
+          <div class="skill-category-card" id="skill-programming">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon purple">
+                <i class="ph ph-code"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Programming &amp; Scripting</h3>
+                <p class="skill-cat-subtitle">Automation &amp; Tool Development</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Web Designing</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash / Zsh</span>
+              <span class="skill-tag">PowerShell</span>
+              <span class="skill-tag">Go</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Regex</span>
+              <span class="skill-tag">YARA Rules</span>
+              <span class="skill-tag">Sigma Rules</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// 03. projects</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card" id="project-1">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="ph ph-robot"></i></div>
+              <div class="project-status">
+                <span class="project-badge active">Active</span>
+              </div>
+            </div>
+            <h3 class="project-title">Automated Threat Hunting Script</h3>
+            <p class="project-desc">
+              Developed a Python-based threat hunting automation framework that ingests IOCs from OSINT feeds, correlates events in Splunk via REST API, and auto-generates structured IR reports — reducing manual analysis time by 70%.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Splunk API</span>
+              <span class="tech-tag">STIX/TAXII</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Threat Intel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MaheshSyangtan/threat-hunter" class="btn-link" target="_blank" rel="noopener">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <!-- ✏️ EDIT: Replace with your write-up link -->
+              <a href="#" class="btn-link btn-link-outline" target="_blank" rel="noopener">
+                <i class="ph ph-file-text"></i> Write-up
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" id="project-2">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="ph ph-network"></i></div>
+              <div class="project-status">
+                <span class="project-badge complete">Complete</span>
+              </div>
+            </div>
+            <h3 class="project-title">Network Vulnerability Assessment</h3>
+            <p class="project-desc">
+              Conducted a full-scope internal network penetration test for a mid-size enterprise. Identified 14 critical misconfigurations including Kerberoasting, Pass-the-Hash paths, and unpatched CVEs, with actionable remediation guidance.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Nmap</span>
+              <span class="tech-tag">Nessus</span>
+              <span class="tech-tag">Metasploit</span>
+              <span class="tech-tag">BloodHound</span>
+              <span class="tech-tag">Active Directory</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MaheshSyangtan/vuln-assessment" class="btn-link" target="_blank" rel="noopener">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="#" class="btn-link btn-link-outline" target="_blank" rel="noopener">
+                <i class="ph ph-file-text"></i> Write-up
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" id="project-3">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="ph ph-cloud-warning"></i></div>
+              <div class="project-status">
+                <span class="project-badge research">Research</span>
+              </div>
+            </div>
+            <h3 class="project-title">Cloud Security Posture Dashboard</h3>
+            <p class="project-desc">
+              Built a real-time AWS security posture dashboard that evaluates S3 ACLs, IAM privilege escalation paths, CloudTrail gaps, and Security Group misconfigurations using Boto3 and outputs risk-scored findings to a web UI.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">AWS Boto3</span>
+              <span class="tech-tag">IAM</span>
+              <span class="tech-tag">CloudTrail</span>
+              <span class="tech-tag">Terraform</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MaheshSyangtan/cloud-security-dash" class="btn-link" target="_blank" rel="noopener">
+                <i class="ph ph-github-logo"></i> GitHub
+              </a>
+              <a href="#" class="btn-link btn-link-outline" target="_blank" rel="noopener">
+                <i class="ph ph-file-text"></i> Documentation
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section class="section certs-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// 04. education</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="certs-education-wrapper">
+
+          <!-- Education -->
+          <div class="education-col">
+            <h3 class="sub-heading"><i class="ph ph-graduation-cap"></i> Education</h3>
+            <div class="education-list">
+
+              <div class="education-item" id="edu-1">
+                <div class="edu-timeline-dot"></div>
+                <div class="edu-content">
+                  <div class="edu-degree">BCS.CS.NT (Bachelor of Computer Science in Computer Science &amp; Network Technology)</div>
+                  <div class="edu-institution">Lincoln International College</div>
+                  <div class="edu-meta">
+                    <span><i class="ph ph-calendar-blank"></i> 2024 – Present</span>
+                    <span><i class="ph ph-map-pin"></i> Kathmandu, Nepal</span>
+                  </div>
+                  <p class="edu-notes">Currently studying Computer Science and Network Technology. Focused on systems security, network architecture, web technologies, and security practices.</p>
+                </div>
+              </div>
+
+              <div class="education-item" id="edu-2">
+                <div class="edu-timeline-dot"></div>
+                <div class="edu-content">
+                  <div class="edu-degree">Professional Training &amp; Labs</div>
+                  <div class="edu-institution">TCM Security / Hack The Box / TryHackMe</div>
+                  <div class="edu-meta">
+                    <span><i class="ph ph-calendar-blank"></i> 2022 – Present</span>
+                  </div>
+                  <p class="edu-notes">Actively engaging in hands-on laboratories, learning about ethical hacking, threat hunting, secure software architecture, and vulnerability research.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// 05. contact</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-wrapper">
+
+          <div class="contact-info-col">
+            <p class="contact-tagline">
+              Have a security challenge, a collaboration idea, or just want to talk shop?  
+              <strong>My inbox is always open.</strong>
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:lanamahesh128@gmail.com" class="contact-link-item" id="contact-email">
+                <div class="contact-link-icon email-icon">
+                  <i class="ph ph-envelope"></i>
+                </div>
+                <div>
+                  <div class="contact-link-label">Email</div>
+                  <div class="contact-link-value">lanamahesh128@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/MaheshSyangtan" class="contact-link-item" id="contact-github" target="_blank" rel="noopener">
+                <div class="contact-link-icon github-icon">
+                  <i class="ph ph-github-logo"></i>
+                </div>
+                <div>
+                  <div class="contact-link-label">GitHub</div>
+                  <div class="contact-link-value">github.com/MaheshSyangtan</div>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/mahesh-syangtan-34989441a/" class="contact-link-item" id="contact-linkedin" target="_blank" rel="noopener">
+                <div class="contact-link-icon linkedin-icon">
+                  <i class="ph ph-linkedin-logo"></i>
+                </div>
+                <div>
+                  <div class="contact-link-label">LinkedIn</div>
+                  <div class="contact-link-value">mahesh-syangtan...</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="John Doe"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email-input" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="contact-email-input"
+                  name="email"
+                  class="form-input"
+                  placeholder="john@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Security Consultation / Bug Bounty Collaboration"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-textarea"
+                  rows="5"
+                  placeholder="Tell me about your project or inquiry..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+                <i class="ph ph-paper-plane-tilt"></i>
+                <span class="btn-submit-text">Send Message</span>
+              </button>
+
+              <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> <strong>Mahesh Syangtan</strong>. Built with ❤️ &amp; a terminal.
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/MaheshSyangtan" class="footer-icon" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mahesh-syangtan-34989441a/" class="footer-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="mailto:lanamahesh128@gmail.com" class="footer-icon" aria-label="Email">
+          <i class="ph ph-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
