@@ -371,14 +371,39 @@ if (form) {
       return;
     }
 
-    // Simulate sending
+    // Submit form via Web3Forms API
     setSubmitting(true);
 
-    await fakeDelay(1800);
+    try {
+      const formData = new FormData(form);
 
-    setSubmitting(false);
-    form.reset();
-    showFeedback('success', '✓ Message sent securely. I\'ll respond within 24 hours.');
+      if (formData.get('access_key') === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
+        setSubmitting(false);
+        showFeedback('error-msg', '⚠ Web3Forms access key is not set. Please refer to instructions to configure it.');
+        return;
+      }
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      const result = await response.json();
+      setSubmitting(false);
+
+      if (response.status === 200 && result.success) {
+        form.reset();
+        showFeedback('success', '✓ Message sent securely. I\'ll respond within 24 hours.');
+      } else {
+        showFeedback('error-msg', `⚠ Error: ${result.message || 'Submission failed.'}`);
+      }
+    } catch (error) {
+      setSubmitting(false);
+      showFeedback('error-msg', '⚠ Network error. Please check your internet connection and try again.');
+    }
   });
 }
 
