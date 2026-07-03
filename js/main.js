@@ -371,19 +371,13 @@ if (form) {
       return;
     }
 
-    // Submit form via Web3Forms API
+    // Submit form via Formspree
     setSubmitting(true);
 
     try {
       const formData = new FormData(form);
 
-      if (formData.get('access_key') === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
-        setSubmitting(false);
-        showFeedback('error-msg', '⚠ Web3Forms access key is not set. Please refer to instructions to configure it.');
-        return;
-      }
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formspree.io/f/xnjkowoq', {
         method: 'POST',
         headers: {
           'Accept': 'application/json'
@@ -391,14 +385,14 @@ if (form) {
         body: formData
       });
 
-      const result = await response.json();
       setSubmitting(false);
 
-      if (response.status === 200 && result.success) {
+      if (response.ok) {
         form.reset();
         showFeedback('success', '✓ Message sent securely. I\'ll respond within 24 hours.');
       } else {
-        showFeedback('error-msg', `⚠ Error: ${result.message || 'Submission failed.'}`);
+        const result = await response.json();
+        showFeedback('error-msg', `⚠ Error: ${result.errors ? result.errors.map(e => e.message).join(', ') : 'Submission failed.'}`);
       }
     } catch (error) {
       setSubmitting(false);
