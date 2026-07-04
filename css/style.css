@@ -943,8 +943,8 @@ button {
 
 .certs-education-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
-  max-width: 800px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
   margin: 0 auto;
   gap: 3rem;
   align-items: start;

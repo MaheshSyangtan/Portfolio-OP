@@ -133,18 +133,20 @@ const terminalOutput = document.getElementById('terminal-output');
 
 const terminalScript = [
   { delay: 200,  type: 'cmd',    content: 'whoami' },
-  { delay: 400,  type: 'output', content: '▸ security_engineer :: penetration_tester :: threat_hunter', cls: 'term-success' },
+  { delay: 400,  type: 'output', content: '▸ mahesh_syangtan :: penetration_tester :: threat_hunter :: appsec', cls: 'term-success' },
   { delay: 900,  type: 'cmd',    content: 'nmap -sV --script vuln portfolio.local' },
   { delay: 1100, type: 'output', content: 'Starting Nmap 7.94 — https://nmap.org', cls: 'term-info' },
   { delay: 1300, type: 'output', content: 'Host: portfolio.local (127.0.0.1) — Status: Up', cls: 'term-output-line' },
-  { delay: 1500, type: 'output', content: 'PORT   STATE SERVICE  VERSION', cls: 'term-output-line' },
-  { delay: 1700, type: 'output', content: '443/tcp  open  https    nginx 1.24.0', cls: 'term-output-line' },
+  { delay: 1500, type: 'output', content: 'PORT    STATE  SERVICE   VERSION', cls: 'term-output-line' },
+  { delay: 1700, type: 'output', content: '443/tcp  open  https    nginx 1.24.0 (TLS 1.3)', cls: 'term-output-line' },
   { delay: 2000, type: 'output', content: '| ssl-cert: Subject: CN=portfolio.local', cls: 'term-output-line' },
   { delay: 2200, type: 'output', content: '| Nmap done: 0 vulnerabilities found ✓', cls: 'term-success' },
   { delay: 2700, type: 'cmd',    content: 'cat skills.txt | grep -i "top"' },
-  { delay: 2900, type: 'output', content: '★  Python · Bash · Splunk · AWS · Metasploit · Burp Suite', cls: 'term-output-line' },
-  { delay: 3300, type: 'cmd',    content: 'echo "Welcome. Let\'s build something secure."' },
-  { delay: 3500, type: 'output', content: 'Welcome. Let\'s build something secure. 🔐', cls: 'term-success' },
+  { delay: 2900, type: 'output', content: '★  Python · Bash · Burp Suite · Metasploit · Splunk · AWS · Wireshark', cls: 'term-output-line' },
+  { delay: 3400, type: 'cmd',    content: 'cat certifications.txt' },
+  { delay: 3600, type: 'output', content: '[*] eJPT (Pursuing)  |  Security+ (Pursuing)  |  THM Top 10%  |  HTB Active', cls: 'term-info' },
+  { delay: 4200, type: 'cmd',    content: 'echo "Available for collaboration — let\'s build something secure."' },
+  { delay: 4400, type: 'output', content: 'Available for collaboration — let\'s build something secure. 🔐', cls: 'term-success' },
 ];
 
 function renderTerminalLine(item) {
@@ -439,10 +441,6 @@ function setSubmitting(loading) {
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function fakeDelay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 /* ==================== SMOOTH SECTION LINKS ==================== */
