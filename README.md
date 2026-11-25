@@ -246,12 +246,12 @@ vercel --prod
 
 | Metric | Target | Actual |
 |--------|--------|--------|
-| **Total Size (gzipped)** | < 50 KB | ~35 KB |
-| **First Contentful Paint** | < 1.5s | ~0.8s |
-| **Lighthouse Performance** | > 90 | 95+ |
-| **Lighthouse Accessibility** | > 95 | 100 |
-| **Lighthouse Best Practices** | > 90 | 100 |
-| **Lighthouse SEO** | > 90 | 100 |
+| **Total Size (gzipped)** | < 50 KB | not measured |
+| **First Contentful Paint** | < 1.5s | not measured |
+| **Lighthouse Performance** | > 90 | not measured |
+| **Lighthouse Accessibility** | > 95 | not measured |
+| **Lighthouse Best Practices** | > 90 | not measured |
+| **Lighthouse SEO** | > 90 | not measured |
 
 ---
 

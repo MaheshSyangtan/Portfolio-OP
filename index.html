@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cybersecurity Professional Portfolio — Penetration Testing, AppSec, GRC, and more." />
+  <meta name="description" content="Cybersecurity Professional Portfolio: Penetration Testing, AppSec, GRC, and more." />
   <meta name="keywords" content="cybersecurity, penetration testing, appsec, OSCP, portfolio, security engineer" />
   <meta name="author" content="Mahesh Syangtan" />
   <title>Mahesh Syangtan | Cybersecurity Professional</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='30' font-weight='bold' fill='%2300ff66' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,10 +20,11 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ==================== NAVIGATION ==================== -->
   <header class="nav-header" id="nav-header">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <a href="#home" class="nav-logo">
         <span class="logo-bracket">[</span>
         <span class="logo-text">MS</span>
@@ -39,7 +41,7 @@
         <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu">
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -47,9 +49,12 @@
     </nav>
   </header>
 
-  <!-- Mobile Nav Overlay -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
-    <div class="mobile-nav-content">
+  <!-- Mobile menu: native dialog handles focus, Escape and outside click -->
+  <dialog class="mobile-nav" id="mobile-nav" aria-label="Site menu">
+    <button class="mobile-nav-close" id="mobile-nav-close" type="button" aria-label="Close menu" autofocus>
+      <i class="ph ph-x" aria-hidden="true"></i>
+    </button>
+    <nav aria-label="Mobile">
       <ul class="mobile-nav-links">
         <li><a href="#home" class="mobile-nav-link">Home</a></li>
         <li><a href="#about" class="mobile-nav-link">About</a></li>
@@ -58,17 +63,15 @@
         <li><a href="#education" class="mobile-nav-link">Education</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
       </ul>
-    </div>
-  </div>
+    </nav>
+  </dialog>
 
-  <main>
+  <main id="main" tabindex="-1">
 
     <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero-section" id="home">
-      <!-- Animated grid background -->
-      <div class="hero-grid-bg"></div>
-      <!-- Particle canvas -->
-      <canvas class="particle-canvas" id="particle-canvas"></canvas>
+    <section class="hero-section" id="home" tabindex="-1">
+      <!-- Static coordinate grid: a network-map motif, not motion -->
+      <div class="hero-grid-bg" aria-hidden="true"></div>
 
       <div class="hero-content">
         <!-- Status badge -->
@@ -89,33 +92,30 @@
         <p class="hero-subtitle">
           Passionate about <span class="accent">Penetration Testing</span>,
           <span class="accent">Application Security</span>, and
-          <span class="accent">Governance, Risk &amp; Compliance (GRC)</span> —
+          <span class="accent">Governance, Risk &amp; Compliance (GRC)</span>,
           building resilient defenses from the ground up.
         </p>
 
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
-            <i class="ph ph-shield-check"></i>
+          <a href="#projects" class="btn btn-primary">
+            <i class="ph ph-shield-check" aria-hidden="true"></i>
             View Projects
           </a>
-          <a href="resume.pdf" class="btn btn-outline" id="hero-download-resume" download>
-            <i class="ph ph-download-simple"></i>
-            Download Resume
+          <a href="#contact" class="btn btn-outline">
+            <i class="ph ph-chat-circle" aria-hidden="true"></i>
+            Get In Touch
           </a>
         </div>
 
         <!-- Terminal Widget -->
-        <div class="terminal-widget" id="terminal-widget">
+        <div class="terminal-widget" id="terminal-widget" aria-hidden="true">
           <div class="terminal-titlebar">
             <div class="terminal-dots">
               <span class="dot dot-red"></span>
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
             </div>
-            <span class="terminal-title">bash — 80×24</span>
-            <span class="terminal-secure-badge">
-              <i class="ph ph-lock-simple"></i> SSH Secure
-            </span>
+            <span class="terminal-title">portfolio shell</span>
           </div>
           <div class="terminal-body" id="terminal-body">
             <div class="terminal-output" id="terminal-output"></div>
@@ -129,7 +129,7 @@
     </section>
 
     <!-- ==================== ABOUT SECTION ==================== -->
-    <section class="section about-section" id="about">
+    <section class="section about-section" id="about" tabindex="-1">
       <div class="container">
         <div class="section-header">
           <span class="section-label">// 01. about_me</span>
@@ -141,10 +141,10 @@
           <div class="about-text-col">
             <div class="about-card">
               <p class="about-bio">
-                I'm a passionate cybersecurity professional with a relentless drive to stay ahead of evolving threats. My expertise spans the full security lifecycle — from proactive red-team engagements and vulnerability research to building resilient blue-team detection pipelines and governance frameworks.
+                I'm a cybersecurity professional focused on staying ahead of evolving threats. My work spans the security lifecycle, from red-team engagements and vulnerability research to blue-team detection pipelines and governance frameworks.
               </p>
               <p class="about-bio">
-                I believe the best defenders think like attackers. My work is grounded in the principle that security is not a product — it's a mindset. Whether hunting advanced persistent threats, hardening cloud infrastructure, or aligning teams with compliance frameworks, I bring structured thinking and technical depth to every engagement.
+                I believe the best defenders think like attackers. Security is not a product, it's a mindset. Whether hunting advanced persistent threats, hardening cloud infrastructure, or aligning teams with compliance frameworks, I bring structured thinking and technical depth to every engagement.
               </p>
               <div class="about-tags">
                 <span class="tag">🎯 Threat Hunter</span>
@@ -186,7 +186,7 @@
     </section>
 
     <!-- ==================== SKILLS SECTION ==================== -->
-    <section class="section skills-section" id="skills">
+    <section class="section skills-section" id="skills" tabindex="-1">
       <div class="container">
         <div class="section-header">
           <span class="section-label">// 02. skills_matrix</span>
@@ -298,7 +298,7 @@
     </section>
 
     <!-- ==================== PROJECTS SECTION ==================== -->
-    <section class="section projects-section" id="projects">
+    <section class="section projects-section" id="projects" tabindex="-1">
       <div class="container">
         <div class="section-header">
           <span class="section-label">// 03. projects</span>
@@ -318,7 +318,7 @@
             </div>
             <h3 class="project-title">Automated Threat Hunting Script</h3>
             <p class="project-desc">
-              Developed a Python-based threat hunting automation framework that ingests IOCs from OSINT feeds, correlates events in Splunk via REST API, and auto-generates structured IR reports — reducing manual analysis time by 70%.
+              Developed a Python-based threat hunting automation framework that ingests IOCs from OSINT feeds, correlates events in Splunk via REST API, and generates structured IR reports.
             </p>
             <div class="project-tech-tags">
               <span class="tech-tag">Python</span>
@@ -331,9 +331,7 @@
               <a href="https://github.com/MaheshSyangtan/threat-hunter" class="btn-link" target="_blank" rel="noopener">
                 <i class="ph ph-github-logo"></i> GitHub
               </a>
-              <a href="#" class="btn-link btn-link-outline" target="_blank" rel="noopener">
-                <i class="ph ph-file-text"></i> Write-up
-              </a>
+
             </div>
           </article>
 
@@ -347,7 +345,7 @@
             </div>
             <h3 class="project-title">Network Vulnerability Assessment</h3>
             <p class="project-desc">
-              Conducted a full-scope internal network penetration test for a mid-size enterprise. Identified 14 critical misconfigurations including Kerberoasting, Pass-the-Hash paths, and unpatched CVEs, with actionable remediation guidance.
+              Conducted a full-scope internal network penetration test for a mid-size enterprise. Identified critical misconfigurations including Kerberoasting, Pass-the-Hash paths, and unpatched CVEs, with actionable remediation guidance.
             </p>
             <div class="project-tech-tags">
               <span class="tech-tag">Nmap</span>
@@ -360,9 +358,7 @@
               <a href="https://github.com/MaheshSyangtan/vuln-assessment" class="btn-link" target="_blank" rel="noopener">
                 <i class="ph ph-github-logo"></i> GitHub
               </a>
-              <a href="#" class="btn-link btn-link-outline" target="_blank" rel="noopener">
-                <i class="ph ph-file-text"></i> Write-up
-              </a>
+
             </div>
           </article>
 
@@ -389,9 +385,7 @@
               <a href="https://github.com/MaheshSyangtan/cloud-security-dash" class="btn-link" target="_blank" rel="noopener">
                 <i class="ph ph-github-logo"></i> GitHub
               </a>
-              <a href="#" class="btn-link btn-link-outline" target="_blank" rel="noopener">
-                <i class="ph ph-file-text"></i> Documentation
-              </a>
+
             </div>
           </article>
 
@@ -400,7 +394,7 @@
     </section>
 
     <!-- ==================== EDUCATION SECTION ==================== -->
-    <section class="section certs-section" id="education">
+    <section class="section certs-section" id="education" tabindex="-1">
       <div class="container">
         <div class="section-header">
           <span class="section-label">// 04. education &amp; certs</span>
@@ -416,7 +410,7 @@
             <div class="certs-grid">
 
               <div class="cert-card" id="cert-ejpt">
-                <div class="cert-icon oscp">eJPT</div>
+                <div class="cert-icon ejpt">eJPT</div>
                 <div class="cert-info">
                   <div class="cert-name">eLearnSecurity Junior Penetration Tester (eJPT)</div>
                   <div class="cert-issuer">INE / eLearnSecurity</div>
@@ -440,9 +434,9 @@
               </div>
 
               <div class="cert-card" id="cert-thm">
-                <div class="cert-icon gcih">THM</div>
+                <div class="cert-icon thm">THM</div>
                 <div class="cert-info">
-                  <div class="cert-name">TryHackMe — Top 10% Ranking</div>
+                  <div class="cert-name">TryHackMe, Top 10% Ranking</div>
                   <div class="cert-issuer">TryHackMe</div>
                   <div class="cert-meta">
                     <span class="cert-date"><i class="ph ph-calendar-blank"></i> 2022 – Present</span>
@@ -452,9 +446,9 @@
               </div>
 
               <div class="cert-card" id="cert-htb">
-                <div class="cert-icon ceh">HTB</div>
+                <div class="cert-icon htb">HTB</div>
                 <div class="cert-info">
-                  <div class="cert-name">Hack The Box — Active Practitioner</div>
+                  <div class="cert-name">Hack The Box, Active Practitioner</div>
                   <div class="cert-issuer">Hack The Box</div>
                   <div class="cert-meta">
                     <span class="cert-date"><i class="ph ph-calendar-blank"></i> 2022 – Present</span>
@@ -517,7 +511,7 @@
     </section>
 
     <!-- ==================== CONTACT SECTION ==================== -->
-    <section class="section contact-section" id="contact">
+    <section class="section contact-section" id="contact" tabindex="-1">
       <div class="container">
         <div class="section-header">
           <span class="section-label">// 05. contact</span>
@@ -570,61 +564,72 @@
           <div class="contact-form-col">
             <form class="contact-form" id="contact-form" action="https://formspree.io/f/xnjkowoq" method="POST" novalidate>
               <div class="form-group">
-                <label for="contact-name" class="form-label">Name</label>
+                <label for="contact-name" class="form-label">Name <span aria-hidden="true">*</span></label>
                 <input
                   type="text"
                   id="contact-name"
                   name="name"
                   class="form-input"
-                  placeholder="John Doe"
+                  placeholder="Your name"
                   autocomplete="name"
+                  data-error="name-error"
                   required
                 />
+                <span class="field-error" id="name-error"></span>
               </div>
 
               <div class="form-group">
-                <label for="contact-email-input" class="form-label">Email</label>
+                <label for="contact-email-input" class="form-label">Email <span aria-hidden="true">*</span></label>
                 <input
                   type="email"
                   id="contact-email-input"
                   name="email"
                   class="form-input"
-                  placeholder="john@example.com"
+                  placeholder="you@example.com"
                   autocomplete="email"
+                  autocapitalize="none"
+                  spellcheck="false"
+                  data-error="email-error"
                   required
                 />
+                <span class="field-error" id="email-error"></span>
               </div>
 
               <div class="form-group">
-                <label for="contact-subject" class="form-label">Subject</label>
+                <label for="contact-subject" class="form-label">Subject <span aria-hidden="true">*</span></label>
                 <input
                   type="text"
                   id="contact-subject"
                   name="subject"
                   class="form-input"
-                  placeholder="Security Consultation / Bug Bounty Collaboration"
+                  placeholder="Security consultation or collaboration"
+                  data-error="subject-error"
                   required
                 />
+                <span class="field-error" id="subject-error"></span>
               </div>
 
               <div class="form-group">
-                <label for="contact-message" class="form-label">Message</label>
+                <label for="contact-message" class="form-label">Message <span aria-hidden="true">*</span></label>
                 <textarea
                   id="contact-message"
                   name="message"
                   class="form-textarea"
                   rows="5"
-                  placeholder="Tell me about your project or inquiry..."
+                  placeholder="Tell me about your project or inquiry"
+                  data-error="message-error"
+                  autocomplete="off"
                   required
                 ></textarea>
+                <span class="field-error" id="message-error"></span>
               </div>
 
               <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
-                <i class="ph ph-paper-plane-tilt"></i>
+                <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
                 <span class="btn-submit-text">Send Message</span>
               </button>
 
-              <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+              <div class="form-feedback" id="form-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
             </form>
           </div>
 
