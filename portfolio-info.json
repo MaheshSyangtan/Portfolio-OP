@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "title": "Mahesh Syangtan | Cybersecurity Professional",
+    "description": "Cybersecurity Professional Portfolio: Penetration Testing, AppSec, GRC, and more.",
+    "keywords": ["cybersecurity", "penetration testing", "appsec", "OSCP", "portfolio", "security engineer"],
+    "author": "Mahesh Syangtan",
+    "language": "en"
+  },
+  "brand": {
+    "logoText": "[MS]_",
+    "status": "Available for Opportunities"
+  },
+  "navigation": {
+    "landmarks": ["Primary", "Mobile"],
+    "items": [
+      { "label": "Home", "href": "#home", "section": "home" },
+      { "label": "About", "href": "#about", "section": "about" },
+      { "label": "Skills", "href": "#skills", "section": "skills" },
+      { "label": "Projects", "href": "#projects", "section": "projects" },
+      { "label": "Education", "href": "#education", "section": "education" },
+      { "label": "Contact", "href": "#contact", "section": "contact" }
+    ]
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Mahesh Syangtan",
+    "rolePrefix": "Cybersecurity",
+    "roleVariants": [
+      "Engineer",
+      "Penetration Tester",
+      "Threat Hunter",
+      "AppSec Specialist",
+      "GRC Analyst"
+    ],
+    "headline": "Securing Architecture. Defending Data.",
+    "subtitle": "Passionate about Penetration Testing, Application Security, and Governance, Risk & Compliance (GRC), building resilient defenses from the ground up.",
+    "callsToAction": [
+      { "label": "View Projects", "href": "#projects" },
+      { "label": "Get In Touch", "href": "#contact" }
+    ],
+    "terminal": {
+      "title": "portfolio shell",
+      "prompt": "visitor@portfolio:~$",
+      "lines": [
+        { "type": "cmd", "content": "whoami", "delayMs": 200 },
+        { "type": "output", "content": "mahesh_syangtan :: penetration tester :: threat hunter", "style": "term-success", "delayMs": 400 },
+        { "type": "cmd", "content": "cat skills.txt | grep -i \"top\"", "delayMs": 900 },
+        { "type": "output", "content": "Python · Bash · Burp Suite · Metasploit · Splunk · AWS", "style": "term-info", "delayMs": 1100 },
+        { "type": "cmd", "content": "cat certifications.txt", "delayMs": 1600 },
+        { "type": "output", "content": "eJPT (pursuing) · Security+ (pursuing) · THM · HTB", "style": "term-info", "delayMs": 1800 },
+        { "type": "cmd", "content": "echo \"Open to security collaborations\"", "delayMs": 2400 },
+        { "type": "output", "content": "Open to security collaborations", "style": "term-success", "delayMs": 2600 }
+      ]
+    }
+  },
+  "about": {
+    "sectionLabel": "// 01. about_me",
+    "title": "About Me",
+    "bio": [
+      "I'm a cybersecurity professional focused on staying ahead of evolving threats. My work spans the security lifecycle, from red-team engagements and vulnerability research to blue-team detection pipelines and governance frameworks.",
+      "I believe the best defenders think like attackers. Security is not a product, it's a mindset. Whether hunting advanced persistent threats, hardening cloud infrastructure, or aligning teams with compliance frameworks, I bring structured thinking and technical depth to every engagement."
+    ],
+    "roles": [
+      "Threat Hunter",
+      "Red Teamer",
+      "Blue Teamer",
+      "Cloud Security",
+      "GRC Specialist",
+      "Bug Hunter"
+    ],
+    "stats": [
+      { "label": "CTF Challenges Solved", "value": "50+", "target": 50, "suffix": "+" },
+      { "label": "Vulnerabilities Found", "value": "10+", "target": 10, "suffix": "+" },
+      { "label": "Years of Learning", "value": "2+", "target": 2, "suffix": "+" },
+      { "label": "Continuous Learning", "value": "Active" }
+    ]
+  },
+  "skills": {
+    "sectionLabel": "// 02. skills_matrix",
+    "title": "Skills Matrix",
+    "categories": [
+      {
+        "id": "skill-offensive",
+        "title": "Offensive Security",
+        "subtitle": "Red Team & Penetration Testing",
+        "color": "red",
+        "skills": ["Kali Linux", "Metasploit", "Burp Suite", "Wireshark", "Nmap / Nessus", "SQLMap", "John the Ripper", "Cobalt Strike", "OWASP Top 10"]
+      },
+      {
+        "id": "skill-defensive",
+        "title": "Defensive Security",
+        "subtitle": "Blue Team & Incident Response",
+        "color": "blue",
+        "skills": ["Splunk SIEM", "Elastic Stack", "CrowdStrike", "Snort / Suricata", "Incident Response", "Digital Forensics", "Threat Intelligence", "MITRE ATT&CK", "Vulnerability Mgmt"]
+      },
+      {
+        "id": "skill-cloud",
+        "title": "Cloud & DevSecOps",
+        "subtitle": "Infrastructure & Pipeline Security",
+        "color": "teal",
+        "skills": ["AWS Security", "Azure Sentinel", "Docker / Kubernetes", "Terraform", "CI/CD Security", "IAM / Zero Trust", "CSPM Tools", "Secrets Management", "SBOM Analysis"]
+      },
+      {
+        "id": "skill-programming",
+        "title": "Programming & Scripting",
+        "subtitle": "Automation & Tool Development",
+        "color": "purple",
+        "skills": ["Web Designing", "Python", "Bash / Zsh", "PowerShell", "Go", "JavaScript", "Regex", "YARA Rules", "Sigma Rules", "SQL"]
+      }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "// 03. projects",
+    "title": "Featured Projects",
+    "items": [
+      {
+        "id": "project-1",
+        "title": "Automated Threat Hunting Script",
+        "status": "Active",
+        "description": "Developed a Python-based threat hunting automation framework that ingests IOCs from OSINT feeds, correlates events in Splunk via REST API, and generates structured IR reports.",
+        "technologies": ["Python", "Splunk API", "STIX/TAXII", "REST APIs", "Threat Intel"],
+        "links": [{ "label": "GitHub", "url": "https://github.com/MaheshSyangtan/threat-hunter" }]
+      },
+      {
+        "id": "project-2",
+        "title": "Network Vulnerability Assessment",
+        "status": "Complete",
+        "description": "Conducted a full-scope internal network penetration test for a mid-size enterprise. Identified critical misconfigurations including Kerberoasting, Pass-the-Hash paths, and unpatched CVEs, with actionable remediation guidance.",
+        "technologies": ["Nmap", "Nessus", "Metasploit", "BloodHound", "Active Directory"],
+        "links": [{ "label": "GitHub", "url": "https://github.com/MaheshSyangtan/vuln-assessment" }]
+      },
+      {
+        "id": "project-3",
+        "title": "Cloud Security Posture Dashboard",
+        "status": "Research",
+        "description": "Built a real-time AWS security posture dashboard that evaluates S3 ACLs, IAM privilege escalation paths, CloudTrail gaps, and Security Group misconfigurations using Boto3 and outputs risk-scored findings to a web UI.",
+        "technologies": ["Python", "AWS Boto3", "IAM", "CloudTrail", "Terraform"],
+        "links": [{ "label": "GitHub", "url": "https://github.com/MaheshSyangtan/cloud-security-dash" }]
+      }
+    ]
+  },
+  "educationAndCertifications": {
+    "sectionLabel": "// 04. education & certs",
+    "title": "Education & Certifications",
+    "certifications": [
+      {
+        "id": "cert-ejpt",
+        "abbreviation": "eJPT",
+        "name": "eLearnSecurity Junior Penetration Tester (eJPT)",
+        "issuer": "INE / eLearnSecurity",
+        "date": "In Progress",
+        "status": "Pursuing"
+      },
+      {
+        "id": "cert-secplus",
+        "abbreviation": "SEC+",
+        "name": "CompTIA Security+",
+        "issuer": "CompTIA",
+        "date": "In Progress",
+        "status": "Pursuing"
+      },
+      {
+        "id": "cert-thm",
+        "abbreviation": "THM",
+        "name": "TryHackMe, Top 10% Ranking",
+        "issuer": "TryHackMe",
+        "date": "2022 – Present",
+        "status": "Active"
+      },
+      {
+        "id": "cert-htb",
+        "abbreviation": "HTB",
+        "name": "Hack The Box, Active Practitioner",
+        "issuer": "Hack The Box",
+        "date": "2022 – Present",
+        "status": "Active"
+      }
+    ],
+    "education": [
+      {
+        "id": "edu-1",
+        "degree": "BCS.CS.NT (Bachelor of Computer Science in Computer Science & Network Technology)",
+        "institution": "Lincoln International College",
+        "period": "2024 – Present",
+        "location": "Kathmandu, Nepal",
+        "notes": "Currently studying Computer Science and Network Technology. Focused on systems security, network architecture, web technologies, and security practices."
+      },
+      {
+        "id": "edu-2",
+        "degree": "Professional Training & Labs",
+        "institution": "TCM Security / Hack The Box / TryHackMe",
+        "period": "2022 – Present",
+        "notes": "Actively engaging in hands-on laboratories, learning about ethical hacking, threat hunting, secure software architecture, and vulnerability research."
+      },
+      {
+        "id": "edu-3",
+        "degree": "Higher Secondary Education (+2 Science)",
+        "institution": "Sanothimi Campus",
+        "period": "2022 – 2024",
+        "location": "Bhaktapur, Nepal",
+        "notes": "Completed higher secondary education with focus on science stream before transitioning to a computer science pathway."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "// 05. contact",
+    "title": "Get In Touch",
+    "tagline": "Have a security challenge, a collaboration idea, or just want to talk shop? My inbox is always open.",
+    "links": [
+      { "label": "Email", "value": "lanamahesh128@gmail.com", "href": "mailto:lanamahesh128@gmail.com" },
+      { "label": "GitHub", "value": "github.com/MaheshSyangtan", "href": "https://github.com/MaheshSyangtan" },
+      { "label": "LinkedIn", "value": "Mahesh Syangtan", "href": "https://www.linkedin.com/in/mahesh-syangtan-34989441a/" }
+    ],
+    "form": {
+      "endpoint": "https://formspree.io/f/xnjkowoq",
+      "method": "POST",
+      "fields": [
+        { "name": "name", "label": "Name", "type": "text", "placeholder": "Your name", "autocomplete": "name", "required": true },
+        { "name": "email", "label": "Email", "type": "email", "placeholder": "you@example.com", "autocomplete": "email", "required": true },
+        { "name": "subject", "label": "Subject", "type": "text", "placeholder": "Security consultation or collaboration", "required": true },
+        { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Tell me about your project or inquiry", "rows": 5, "required": true }
+      ],
+      "submitLabel": "Send Message"
+    }
+  },
+  "footer": {
+    "copyright": "© Mahesh Syangtan. Built with ❤️ & a terminal.",
+    "year": "dynamic (current year via JavaScript)",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/MaheshSyangtan" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/mahesh-syangtan-34989441a/" },
+      { "label": "Email", "url": "mailto:lanamahesh128@gmail.com" }
+    ]
+  }
+}
